@@ -2,13 +2,16 @@
 
 This repository contains a small Next.js app used for Experiment 3. It demonstrates:
 
-- A React frontend (Next.js) that loads sample data from an API route
+- A React frontend (Next.js) with a deployed Vercel URL
 - A server API route (`/api/notes`) that returns sample data from `data/notes.json`
 - Client-side persistence using `localStorage` (notes persist in the browser)
 
 What I implemented
-- Responsive single-page notes app (add/delete notes)
-- README with instructions to run locally, push to GitHub, and deploy to Vercel
+
+- Responsive single-page notes app (add/edit/delete notes)
+- Search/filter, note timestamps, note count, and clear-all
+- Colorful UI with gradient header, note badges, and toast notifications
+- README with run, push, and deploy instructions
 
 How to run locally
 
@@ -31,21 +34,23 @@ Deploying
 1. Create a new GitHub repository and push this project.
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit - Experiment 3"
-git branch -M main
 git remote add origin https://github.com/<your-username>/<repo>.git
 git push -u origin main
 ```
 
 2. Deploy to Vercel
 
-- Sign in to Vercel and import the GitHub repository.
-- Vercel auto-detects Next.js and will build & deploy the app.
+- Sign in to Vercel → Import Project → choose `HarshBardhan571/Experiment-3` → Deploy.
+- Or use the Vercel CLI:
+
+```bash
+npm i -g vercel
+vercel login
+vercel --prod
+```
 
 Notes about persistence
 
-Serverless functions cannot persist file changes at runtime. For this assignment the app persists notes in the browser via `localStorage`. The API route returns sample content from `data/notes.json`.
+Serverless functions (Vercel) cannot persist file changes at runtime. This app persists notes in the browser via `localStorage`. The API route returns sample content from `data/notes.json`.
 
-If you want full server persistence, connect to a simple database (Firebase, Supabase, or MongoDB Atlas) and update the API routes accordingly.
+If you need server persistence, I can add Supabase/Firebase integration and update the API routes — tell me which provider you prefer.
