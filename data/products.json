@@ -1,0 +1,5 @@
+[
+  { "id": "1", "name": "Red Widget", "price": 19.99, "desc": "A bright red widget for starters." },
+  { "id": "2", "name": "Blue Gadget", "price": 29.5, "desc": "A cool blue gadget with extra features." },
+  { "id": "3", "name": "Green Thingamajig", "price": 9.99, "desc": "A small green thing for daily tasks." }
+]
