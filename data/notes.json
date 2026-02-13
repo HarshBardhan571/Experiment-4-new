@@ -1,0 +1,4 @@
+[
+  { "id": 1, "text": "Sample note: welcome to Experiment 3" },
+  { "id": 2, "text": "This app stores notes in localStorage (demo)" }
+]
