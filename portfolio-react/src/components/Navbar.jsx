@@ -7,7 +7,7 @@ export default function Navbar(){
   const favCount = state.favorites.length
   return (
     <nav className="nav">
-      <div className="brand">MyPortfolio</div>
+      <div className="brand">Harsh Bardhan Singh</div>
       <ul className="navlinks">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/projects">Projects</Link></li>

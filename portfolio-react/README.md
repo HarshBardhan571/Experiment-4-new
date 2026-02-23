@@ -35,3 +35,6 @@ npm run dev
 ```
 
 Deploy to Vercel: format your deployment name like `{uid}-4-{your-name}.vercel.app` when you link the project.
+
+Example for this submission:
+`23bai70571-4-harsh-bardhan-singh.vercel.app`
