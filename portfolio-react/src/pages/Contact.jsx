@@ -7,10 +7,15 @@ export default function Contact(){
   return (
     <div>
       <h2>Contact</h2>
-      <form className="contactForm" onSubmit={submit}>
+      <p className="muted">Want to work together or ask about a project? Send a message.</p>
+      <form className="contactForm" onSubmit={submit} style={{maxWidth:600}}>
         <input placeholder="Your name" value={name} onChange={(e)=>setName(e.target.value)} />
+        <input placeholder="Your email" />
         <textarea placeholder="Message" value={msg} onChange={(e)=>setMsg(e.target.value)} />
-        <button className="primary">Send</button>
+        <div style={{display:'flex',gap:8}}>
+          <button className="primary">Send</button>
+          <button type="button" className="secondary" onClick={()=>{setName('');setMsg('')}}>Clear</button>
+        </div>
       </form>
     </div>
   )

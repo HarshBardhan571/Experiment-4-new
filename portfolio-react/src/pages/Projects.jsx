@@ -27,12 +27,17 @@ export default function Projects(){
       <div className="grid">
         {visible.map(p => (
           <CardComponent key={p.id} title={p.title} footer={<span className="muted">{p.tech}</span>}>
-            <p>{p.desc}</p>
-            <div style={{marginTop:8}}>
-              {isFavorite(p.id)
-                ? <button onClick={()=>removeFav(p.id)}>Remove favorite</button>
-                : <button className="primary" onClick={()=>addFav(p)}>Add favorite</button>
-              }
+            <div style={{minHeight:60}}>
+              <p>{p.desc}</p>
+            </div>
+            <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginTop:8}}>
+              <div>
+                {isFavorite(p.id)
+                  ? <button onClick={()=>removeFav(p.id)}>Remove favorite</button>
+                  : <button className="primary" onClick={()=>addFav(p)}>Add favorite</button>
+                }
+              </div>
+              <a className="secondary" href="#" onClick={(e)=>e.preventDefault()}>View demo</a>
             </div>
           </CardComponent>
         ))}
