@@ -1,0 +1,9 @@
+/* index.css — lightweight wrapper that includes the existing styles.css
+   This keeps the project aligned with the recommended filename while
+   preserving the original stylesheet. */
+@import './styles.css';
+
+/* small helpers */
+.filterBar{display:flex;gap:12px;align-items:center;margin:12px 0}
+.filterBar input{flex:1;padding:8px;border-radius:6px;border:1px solid var(--muted)}
+.filterMeta{color:var(--muted);font-size:0.9rem}

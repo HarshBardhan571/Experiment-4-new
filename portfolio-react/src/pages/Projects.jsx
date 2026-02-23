@@ -1,4 +1,7 @@
+import { useState } from 'react'
 import CardComponent from '../components/CardComponent'
+import { useAppContext } from '../context/AppContext'
+import FilterBar from '../components/FilterBar'
 
 const demo = [
   {id:1, title:'Project A', desc:'A small notes app', tech:'React'},
@@ -6,13 +9,31 @@ const demo = [
 ]
 
 export default function Projects(){
+  const { state, dispatch } = useAppContext()
+  const [visible, setVisible] = useState(demo)
+
+  function addFav(p){
+    dispatch({type:'ADD_FAVORITE', payload:p})
+  }
+  function removeFav(id){
+    dispatch({type:'REMOVE_FAVORITE', payload:id})
+  }
+  const isFavorite = id => state.favorites.some(f=>f.id===id)
+
   return (
     <div>
       <h2>Projects</h2>
+      <FilterBar items={demo} onChange={setVisible} />
       <div className="grid">
-        {demo.map(p => (
+        {visible.map(p => (
           <CardComponent key={p.id} title={p.title} footer={<span className="muted">{p.tech}</span>}>
             <p>{p.desc}</p>
+            <div style={{marginTop:8}}>
+              {isFavorite(p.id)
+                ? <button onClick={()=>removeFav(p.id)}>Remove favorite</button>
+                : <button className="primary" onClick={()=>addFav(p)}>Add favorite</button>
+              }
+            </div>
           </CardComponent>
         ))}
       </div>
