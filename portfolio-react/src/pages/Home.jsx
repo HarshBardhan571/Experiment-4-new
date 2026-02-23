@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Home(){
   return (
     <div>
-      <HeroSection title="Harsh Bardhan Singh" subtitle="Full‑stack student & developer — experiments, projects, and demos" />
+      <HeroSection title="Harsh Bardhan Singh" subtitle={"Aspiring Data Scientist\n\nPassionate about Artificial Intelligence, Machine Learning, and building intelligent data-driven applications. I love solving real-world problems using data."} />
 
       <section id="about" style={{marginTop:18}}>
         <h2>About Me</h2>
