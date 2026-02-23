@@ -6,17 +6,34 @@ export default function Contact(){
   function submit(e){e.preventDefault(); alert('Thanks, '+(name||'friend'))}
   return (
     <div>
-      <h2>Contact</h2>
-      <p className="muted">Want to work together or ask about a project? Send a message.</p>
-      <form className="contactForm" onSubmit={submit} style={{maxWidth:600}}>
-        <input placeholder="Your name" value={name} onChange={(e)=>setName(e.target.value)} />
-        <input placeholder="Your email" />
-        <textarea placeholder="Message" value={msg} onChange={(e)=>setMsg(e.target.value)} />
-        <div style={{display:'flex',gap:8}}>
-          <button className="primary">Send</button>
-          <button type="button" className="secondary" onClick={()=>{setName('');setMsg('')}}>Clear</button>
+      <h1>Contact Me</h1>
+      <p className="muted">Let's connect and build intelligent solutions together.</p>
+
+      <div className="contact-grid">
+        <div className="info-card">
+          <h3>Harsh Bardhan Singh</h3>
+          <p>🎓 B.Tech in Computer Science</p>
+          <p>💼 Aspiring Data Scientist</p>
+          <p>📍 Your City</p>
+          <p>✉️ harsh@example.com</p>
+          <p>📞 +91 0000000000</p>
         </div>
-      </form>
+
+        <div className="contact-panel">
+          <h3>Send a Message</h3>
+          <form className="contactForm" onSubmit={submit}>
+            <label>Name</label>
+            <input placeholder="Enter your name" value={name} onChange={(e)=>setName(e.target.value)} />
+            <label>Email</label>
+            <input placeholder="Enter your email" />
+            <label>Message</label>
+            <textarea placeholder="Write your message..." value={msg} onChange={(e)=>setMsg(e.target.value)} />
+            <div style={{marginTop:10}}>
+              <button className="primary">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }

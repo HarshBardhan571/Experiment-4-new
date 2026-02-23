@@ -6,14 +6,21 @@ export default function Services(){
   ]
   return (
     <div>
-      <h2>Services</h2>
-      <div className="grid" style={{marginTop:12}}>
-        {list.map(s=> (
-          <article key={s.id} className="card">
-            <h3>{s.title}</h3>
-            <p className="muted">{s.desc}</p>
-          </article>
-        ))}
+      <h1>My Services</h1>
+      <p>I provide data-driven and intelligent solutions to help businesses and individuals make smarter decisions.</p>
+      <div className="service-cards">
+        <div className="service-card orange">
+          <h3>Data Analysis & Visualization</h3>
+          <p>Perform exploratory data analysis and create meaningful dashboards using Python, Pandas, and visualization tools.</p>
+        </div>
+        <div className="service-card cyan">
+          <h3>Machine Learning Development</h3>
+          <p>Build predictive models, classification systems, and AI-based solutions tailored to business requirements.</p>
+        </div>
+        <div className="service-card teal">
+          <h3>AI Web Integration</h3>
+          <p>Integrate machine learning models into modern React-based web applications for real-world deployment.</p>
+        </div>
       </div>
     </div>
   )
