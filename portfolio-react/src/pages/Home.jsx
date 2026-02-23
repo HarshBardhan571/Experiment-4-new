@@ -23,14 +23,22 @@ export default function Home(){
       </section>
 
       <section id="projects" style={{marginTop:18}}>
+        <div className="stats">
+          <div className="stat"><strong>6</strong><div className="muted">projects</div></div>
+          <div className="stat"><strong>3</strong><div className="muted">years learning</div></div>
+          <div className="stat"><strong>10+</strong><div className="muted">technologies</div></div>
+        </div>
+
         <h2>Featured Projects</h2>
         <p className="muted">A selection of small experiments and demos. <Link to="/projects">See all projects</Link></p>
         <div className="grid" style={{marginTop:12}}>
           <article className="card">
+            <img className="projectImage" src="./assets/project1.svg" alt="project" />
             <h3>Notes App</h3>
             <p className="muted">A client-side notes app with persistence and search.</p>
           </article>
           <article className="card">
+            <img className="projectImage" src="./assets/project2.svg" alt="project" />
             <h3>Products Demo</h3>
             <p className="muted">A product listing demo with filters and routing.</p>
           </article>

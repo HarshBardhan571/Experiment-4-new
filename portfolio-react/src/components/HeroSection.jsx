@@ -9,7 +9,7 @@ export default function HeroSection({title, subtitle}){
           <a className="secondary" href="/contact">Contact me</a>
         </div>
       </div>
-      <div className="profile">HB</div>
+      <div className="profile"><img src="./assets/profile.svg" alt="profile"/></div>
     </section>
   )
 }

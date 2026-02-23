@@ -27,6 +27,7 @@ export default function Projects(){
       <div className="grid">
         {visible.map(p => (
           <CardComponent key={p.id} title={p.title} footer={<span className="muted">{p.tech}</span>}>
+            <img className="projectImage" src={`./assets/project${p.id}.svg`} alt={p.title} />
             <div style={{minHeight:60}}>
               <p>{p.desc}</p>
             </div>
